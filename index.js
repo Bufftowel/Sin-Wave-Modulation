@@ -1,4 +1,3 @@
-
 let canvas = document.querySelector("canvas");
 let div = document.querySelector("#container");
 canvas.width = div.offsetWidth;
