@@ -1,0 +1,164 @@
+html {
+	height: 100%;
+}
+
+body {
+	font-family: 'Merriweather', serif;
+	color: white;
+	margin: 0;
+	height: 100%;
+	background: black;
+}
+
+#util, .slidebar, .slidebar  div {
+	height: 50%;
+	display: flex;
+	flex-direction: column;	
+	justify-content: space-around;
+}
+
+button.play-btn {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 2px solid white;
+	background: #263238;
+	outline: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: border 400ms;
+}
+
+span.play-btn:hover {
+	border-left-color: #E0E0E0;
+}
+
+span.play-btn {
+	display: inline-block;
+	height: 20px;
+	border-color: transparent transparent transparent #E0E0E0;
+	transition: 200ms all ease;
+	will-change: border-width;
+	border-style: double;
+    border-width: 0px 0 0px 20px;
+}
+
+span.selected-play-btn {
+	border-style: solid;
+	height: 0;
+  	border-width: 12px 0 12px 20px;
+}
+
+.slidebar  div input, .slidebar  div label {
+	width: 95%;
+}
+
+#container + div {
+	box-sizing: border-box;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2%;
+	background: #263238;
+	border: 4px solid #E0E0E0;
+	border-style: double;
+	border-radius: 10px; 
+}
+
+button.play-btn:hover {
+	border-color: cyan;
+}
+
+button.play-btn:focus {
+	border-color: black;
+}
+
+button.play-btn:focus span.play-btn {
+	border-left-color: #f7f7f7;
+}
+
+#container {
+	float: left;
+	width: 80%;
+	height: 100%;
+	margin: 0;
+}
+
+.effects {
+	display: flex;
+	flex-direction: column;
+}
+
+.effects div input{
+	display: none;
+}
+
+.effects div input:checked + label{
+	color: cyan;
+}
+
+.effects div input + label {
+	display: inline-block;
+	margin-bottom: 3vh;
+}
+
+@media screen and (orientation: portrait) {
+	
+	#container + div {
+		height: 20%;
+		width: 100%;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	#container {
+		float: none;
+		height: 80%;
+		width: 100%;
+	}
+	
+	.slidebar {
+		display: flex;
+		width: 60%;
+		height: 100%;
+		flex-direction: row;	
+		justify-content: space-around;
+		flex-flow: wrap;
+	}
+
+	.slidebar div{
+		width: 50%;
+		height: 50%;
+	}
+	.slidebar label {
+		width: 50%;
+		height: 25%;
+		padding-top: 0;
+	}
+
+	.slidebar input {
+		margin-top: 10px;
+		height: 25%;
+		width: 50%;
+	}
+
+	label{
+		text-align: center;
+		font-size: 2vh;
+	}
+	#util {
+		width: 50%;
+		height: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.effects div input + label {
+		display: inline-block;
+		margin-bottom: 1vh;
+	}
+}

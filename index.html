@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div id="container"><canvas>Canvas</canvas></div>
+	<div>
+		<div class="slidebar">
+			<div>
+				<label for="amp">Amplitude:</label>
+				<input type="range" id="amp" min="1" max="500">
+			</div>
+			<div>
+				<label for="amp">Wavelength:</label>
+				<input type="range" id="wavelength" min="1" max="500">
+			</div>
+			<div>
+				<label for="amp">Base Y Coordinate:</label>
+				<input type="range" id="base" min="1" max="500">
+			</div>
+			<div>
+				<label for="amp">Line Width:</label>
+				<input type="range" id="lineWidth" min="1" max="100" value="1">
+			</div>	
+		</div>
+		<div id="util">
+			<div class="effects">
+				<div><input type="radio" name="wave_effects" id="c1" checked><label for="c1">Default</label></div>
+				<div><input type="radio" name="wave_effects" id="c2"><label for="c2">Effect 1</label></div>
+				<div><input type="radio" name="wave_effects" id="c3"><label for="c3">Effect 2</label></div>
+				<div><input type="radio" name="wave_effects" id="c4"><label for="c4">Effect 3</label></div>
+			</div>
+			<button class="play-btn"><span class="play-btn"></span></button>
+		</div>
+	</div>
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
