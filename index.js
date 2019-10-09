@@ -19,8 +19,8 @@ let exit = false;
 let effect = 1;
 let radio = document.querySelectorAll(".effects input");
 let lineWidth = 1;
-let period1 = Math.random() * Math.PI * 2;
-let period2 = Math.random() * Math.PI * 2;
+let p1 = Math.random() * Math.PI * 2;
+let p2 = Math.random() * Math.PI * 2;
 function animate()
 {
 	if(radio[0].checked == true) effect = 1;
@@ -31,9 +31,9 @@ function animate()
 	wavelength = Number(slider2.value);
 	base = Number(slider3.value);
 	ctx.lineWidth = Number(slider4.value);
-	let r = Math.floor((Math.sin(period1) + 1)* 128);
-	let b = Math.floor((Math.cos(period1 + Math.PI / 2) + 1) * 128);
-	let g = Math.floor((Math.sin(period2) + 1) * 128);
+	let r = Math.floor((Math.sin(p1) + 1)* 128);
+	let b = Math.floor((Math.cos(p1 + Math.PI / 2) + 1) * 128);
+	let g = Math.floor((Math.sin(p2) + 1) * 128);
 	ctx.strokeStyle = "rgb(" + r + "," + b + "," + g + ")";
 	ctx.fillStyle = "rgba(0,0,0,0.05)"
 	ctx.fillRect(0,0,canvas.width,canvas.height);
@@ -47,8 +47,8 @@ function animate()
 	ctx.closePath();
 	c += 0.05;
 	z += 0.03;
-	period2 += 0.05;
-	period1 += 0.03;
+	p2 += 0.05;
+	p1 += 0.03;
 	if(c > 2 * Math.PI) c -= 2 * Math.PI;
 	if(exit) return;
 	requestAnimationFrame(animate);
