@@ -161,4 +161,8 @@ button.play-btn:focus span.play-btn {
 		display: inline-block;
 		margin-bottom: 1vh;
 	}
+
+	button.play-btn {
+		
+	}
 }
