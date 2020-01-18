@@ -1,0 +1,141 @@
+body {
+	background: rgba(0, 0 ,0, 0.95);
+}
+
+#c1, #c2, #c3 {
+	width: 45vw;
+}
+
+label, p {
+	color: #f8f8f8;
+	font-size: 1.5vw;
+}
+
+#container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#container #input
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 95vh;
+}
+
+canvas {
+	border: solid white 4px;
+	border-style: double;
+	margin-bottom: 5px;
+}
+
+#input {
+	height: 100vh;
+}
+
+#input > div
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 50%;
+}
+#input > div > div
+{
+	display: flex;
+	width: 45vw;
+	flex-direction: row;
+	justify-content: space-around;
+	height: 15%;
+}
+#input > div > p {
+	height: 1%;
+} 
+
+#input > div > div span {
+	width:18%;
+}
+
+input {
+	width: 100%;
+}
+
+input:checked + label{
+	color: cyan;
+}
+
+.range {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#output {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+#output p {
+	font-size: 4vh;
+}
+
+svg path {
+	color: black;
+}
+#info {
+	display: flex;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 0;
+	background: rgba(1, 1, 1, 0.75);
+	justify-content: center;
+	align-items: center;
+	transition: 500ms height ease-in-out;
+	overflow: hidden;
+}
+
+#info p{
+	font-size: 1.3rem;
+	width: 70vw;
+	height: 70vh;
+	background: steelblue;
+	opacity: 0.92;
+	border: 10px white solid;
+	border-style: double;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+button.info, #info button {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background: black;
+	outline: none;
+	border: none;
+	z-index: 11;
+}
+
+#info a {
+	text-decoration: none;
+	font-size: 1rem
+	color: white;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
+
+#info a:visited {
+	color: white;
+}
