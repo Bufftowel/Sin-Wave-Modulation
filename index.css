@@ -15,11 +15,12 @@ body {
 	display: flex;
 	flex-direction: column;	
 	justify-content: space-around;
+	align-items: center;
 }
 
 button.play-btn {
-	width: 50px;
-	height: 50px;
+	width: 3rem;
+	height: 3rem;
 	border-radius: 50%;
 	border: 2px solid white;
 	background: #263238;
@@ -28,6 +29,7 @@ button.play-btn {
 	justify-content: center;
 	align-items: center;
 	transition: border 400ms;
+	margin-bottom: 1.5rem;
 }
 
 span.play-btn:hover {
@@ -36,7 +38,7 @@ span.play-btn:hover {
 
 span.play-btn {
 	display: inline-block;
-	height: 20px;
+	height: 1rem;
 	border-color: transparent transparent transparent #E0E0E0;
 	transition: 200ms all ease;
 	will-change: border-width;
@@ -47,7 +49,7 @@ span.play-btn {
 span.selected-play-btn {
 	border-style: solid;
 	height: 0;
-  	border-width: 12px 0 12px 20px;
+  	border-width: 0.6rem 0 0.6rem 1rem;
 }
 
 .slidebar  div input, .slidebar  div label {
@@ -105,6 +107,13 @@ button.play-btn:focus span.play-btn {
 	margin-bottom: 3vh;
 }
 
+#util > div + div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
 @media screen and (orientation: portrait) {
 	
 	#container + div {
@@ -156,13 +165,23 @@ button.play-btn:focus span.play-btn {
 		flex-direction: row;
 		justify-content: space-around;
 		align-items: center;
+		justify-content: space-between;
 	}
 	.effects div input + label {
 		display: inline-block;
 		margin-bottom: 1vh;
 	}
 
-	button.play-btn {
-		
-	}
+}
+
+a, a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+svg path {
+	fill: transparent;
+	stroke: white;
+	stroke-width: 2px;
+	stroke-linecap: round;
 }

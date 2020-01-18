@@ -88,9 +88,6 @@ input[type="radio"] {
 	font-size: 4vh;
 }
 
-svg path {
-	color: black;
-}
 #info {
 	display: flex;
 	position: absolute;
