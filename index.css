@@ -29,7 +29,7 @@ button.play-btn {
 	justify-content: center;
 	align-items: center;
 	transition: border 400ms;
-	margin-bottom: 1.5rem;
+	margin-bottom: 0.5rem;
 }
 
 span.play-btn:hover {
