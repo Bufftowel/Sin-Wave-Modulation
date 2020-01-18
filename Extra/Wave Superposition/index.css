@@ -1,5 +1,7 @@
 body {
 	background: rgba(0, 0 ,0, 0.95);
+	font-size: 1rem;
+	margin: 20px;
 }
 
 #c1, #c2, #c3 {
@@ -8,7 +10,6 @@ body {
 
 label, p {
 	color: #f8f8f8;
-	font-size: 1.5vw;
 }
 
 #container {
@@ -17,23 +18,18 @@ label, p {
 	justify-content: space-between;
 }
 
-#container #input
+#input
 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	height: 95vh;
 }
 
 canvas {
 	border: solid white 4px;
 	border-style: double;
 	margin-bottom: 5px;
-}
-
-#input {
-	height: 100vh;
 }
 
 #input > div
@@ -43,6 +39,7 @@ canvas {
 	justify-content: space-between;
 	height: 50%;
 }
+
 #input > div > div
 {
 	display: flex;
@@ -51,6 +48,7 @@ canvas {
 	justify-content: space-around;
 	height: 15%;
 }
+
 #input > div > p {
 	height: 1%;
 } 
@@ -85,15 +83,17 @@ input[type="radio"] {
 }
 
 #output p {
-	font-size: 4vh;
+	font-size: 2rem;
+	text-shadow: 3px 3px 3px rgba(200, 200, 200);
 }
 
 #info {
 	display: flex;
-	position: absolute;
+	position: fixed;
+	overflow: hidden;
 	top: 0;
 	left: 0;
-	width: 100vw;
+	width: 100%;
 	height: 0;
 	background: rgba(1, 1, 1, 0.75);
 	justify-content: center;
@@ -118,7 +118,7 @@ button.info, #info button {
 	position: absolute;
 	top: 5px;
 	right: 5px;
-	background: black;
+	background: transparent;
 	outline: none;
 	border: none;
 	z-index: 11;
@@ -128,11 +128,53 @@ button.info, #info button {
 	text-decoration: none;
 	font-size: 1rem
 	color: white;
-	position: absolute;
+	position:absolute;
 	bottom: 5px;
 	right: 5px;
 }
 
-#info a:visited {
+#info a:visited, a {
 	color: white;
+}
+
+hr {
+	display: none;
+}
+
+.wavelength + label + label {
+	display: none;
+}
+
+.amplitude + label + label {
+	display: none;
+}
+
+@media screen and (max-width: 700px)
+{
+	.wavelength + label + label {
+		display: inline;
+	}
+
+	.amplitude + label + label {
+		display: inline;
+	}
+	.wavelength + label {
+		display: none;	
+	}
+
+	.amplitude + label {
+		display: none;
+	}
+
+}
+
+@media screen and (orientation: portrait)
+{
+	#container {
+		flex-direction: column;
+	}
+
+	#c1, #c2, #c3, #input > div > div {
+		width: 80vw;
+	}
 }

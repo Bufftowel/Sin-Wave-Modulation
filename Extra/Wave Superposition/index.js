@@ -22,10 +22,12 @@ c11.height = c11.height * pixelDensity;
 c33.width = c33.width * pixelDensity;
 c22.width = c22.width * pixelDensity;
 c11.width = c11.width * pixelDensity;
+
 let p1 = 0, p2 = 0, z= 0, c = 0, tmp1, tmp2;
 let func1 = function(){};
 let func2 = function(){};
 let amplitudec1, amplitudec2, wavelengthc1, wavelengthc2, exit = false;
+
 function animate()
 {
 	amplitudec1 = amp[0].value;
@@ -112,7 +114,7 @@ let infobox = document.querySelector("#info");
 let clsbtn = document.querySelector("#info button");
 let infobutton = document.querySelector("button.info");
 infobutton.addEventListener("click", function(){
-		infobox.style.height = "100vh";
+		infobox.style.height = "100%";
 		clsbtn.style.display = "block";
 		infobutton.style.display = "none";
 });	
