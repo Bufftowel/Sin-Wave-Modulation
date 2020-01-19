@@ -1,6 +1,6 @@
 html {
 	height: 100%;
-	font-size: 2.3vh;
+	font-size: 2.2vh;
 }
 
 body {
@@ -30,7 +30,7 @@ button.play-btn {
 	justify-content: center;
 	align-items: center;
 	transition: border 400ms;
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.7rem;
 }
 
 span.play-btn:hover {
@@ -105,7 +105,8 @@ button.play-btn:focus span.play-btn {
 
 .effects div input + label {
 	display: inline-block;
-	margin-bottom: 3vh;
+	margin-bottom: 2vh;
+	font-size: 3vh;
 }
 
 #util > div + div {
@@ -171,6 +172,10 @@ button.play-btn:focus span.play-btn {
 	.effects div input + label {
 		display: inline-block;
 		margin-bottom: 1vh;
+		font-size: 1.8vh;
+	}
+	a, a:visited {
+		font-size: 1.8vh;
 	}
 
 }
@@ -178,6 +183,14 @@ button.play-btn:focus span.play-btn {
 a, a:visited {
 	color: white;
 	text-decoration: none;
+	margin-top: 2px;
+	font-size: 2vh;
+}
+
+a:hover, a:hover svg path {
+	color: cyan;
+	stroke: cyan;
+	transition: color 500ms, stroke 500ms;
 }
 
 svg path {
